@@ -1,0 +1,21 @@
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\bin\Debug\net6.0\appsettings.Development.json
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\bin\Debug\net6.0\appsettings.json
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\bin\Debug\net6.0\Book shop.exe
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\bin\Debug\net6.0\Book shop.deps.json
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\bin\Debug\net6.0\Book shop.runtimeconfig.json
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\bin\Debug\net6.0\Book shop.dll
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\bin\Debug\net6.0\ref\Book shop.dll
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\bin\Debug\net6.0\Book shop.pdb
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\obj\Debug\net6.0\Book shop.csproj.AssemblyReference.cache
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\obj\Debug\net6.0\Book shop.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\obj\Debug\net6.0\Book shop.AssemblyInfoInputs.cache
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\obj\Debug\net6.0\Book shop.AssemblyInfo.cs
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\obj\Debug\net6.0\Book shop.csproj.CoreCompileInputs.cache
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\obj\Debug\net6.0\Book shop.MvcApplicationPartsAssemblyInfo.cache
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\obj\Debug\net6.0\staticwebassets.build.json
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\obj\Debug\net6.0\staticwebassets.development.json
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\obj\Debug\net6.0\scopedcss\bundle\Book shop.styles.css
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\obj\Debug\net6.0\Book shop.dll
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\obj\Debug\net6.0\ref\Book shop.dll
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\obj\Debug\net6.0\Book shop.pdb
+E:\Programming Software\Fork\CqrsMediatRBookshop\Book shop\CqrsBookshop\obj\Debug\net6.0\Book shop.genruntimeconfig.cache

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "0fc8d489-40df-416d-bbc9-da13e9c607c6": {
+      "ProjectGuid": "0fc8d489-40df-416d-bbc9-da13e9c607c6",
+      "DisplayName": "CqrsBookshop",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
