@@ -7,11 +7,11 @@ namespace CqrsBookshop.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly IMediator _mediator;
+        private readonly ISender _sender;
 
-        public ProductsController(IMediator mediator)
+        public ProductsController(ISender sender)
         {
-            _mediator = mediator;
+            _sender = sender;
         }
     }
 }
