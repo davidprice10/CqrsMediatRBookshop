@@ -8,17 +8,17 @@ namespace CqrsBookshop.Controllers
     [ApiController]
     public class BooksController : ControllerBase
     {
-        private readonly ISender _sender;
+        private readonly IMediator _mediator;
 
-        public BooksController(ISender sender)
+        public BooksController(IMediator mediator)
         {
-            _sender = sender;
+            _mediator = mediator;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetBooksAsync()
         {
-            var products = await _sender.Send(new GetBooksRequest());
+            var products = await _mediator.Send(new GetBooksRequest());
             return Ok(products);
         }
     }
