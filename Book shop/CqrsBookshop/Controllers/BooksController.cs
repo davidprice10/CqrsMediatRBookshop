@@ -1,4 +1,5 @@
-﻿using CqrsBookshop.Requests;
+﻿using CqrsBookshop.Commands;
+using CqrsBookshop.Requests;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,8 +19,23 @@ namespace CqrsBookshop.Controllers
         [HttpGet]
         public async Task<IActionResult> GetBooksAsync()
         {
-            var products = await _mediator.Send(new GetBooksRequest());
-            return Ok(products);
+            var books = await _mediator.Send(new GetBooksRequest());
+            return Ok(books);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> AddBookAsync([FromBody] Book book)
+        {
+            var addedBook = await _mediator.Send(new AddBookCommand(book));
+            return CreatedAtRoute("GetBookById", new { id = addedBook.Id }, addedBook);
+        }
+
+        [HttpGet("{id:int}", Name = "GetBookById")]
+        public async Task<IActionResult> GetBookByIdAsync(int id)
+        {
+            var book = await _mediator.Send(new GetBookByIdRequest(id));
+            return Ok(book);
+        }
+
     }
 }
