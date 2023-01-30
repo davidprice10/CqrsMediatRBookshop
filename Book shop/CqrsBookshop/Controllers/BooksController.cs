@@ -37,18 +37,18 @@ namespace CqrsBookshop.Controllers
             return CreatedAtRoute("GetBookById", new { id = addedBook.Id }, addedBook);
         }
 
-        [HttpDelete]
-        public async Task<IActionResult> DeleteBookAsync([FromBody] Book book)
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> DeleteBookAsync(int id)
         {
-            var deletedBook = await _mediator.Send(new DeleteBookCommand(book));
+            await _mediator.Send(new DeleteBookCommand(id));
             return Ok();
         }
 
         [HttpPut]
         public async Task<IActionResult> UpdateBookAsync([FromBody] Book book)
         {
-            var updatedBook = await _mediator.Send(new UpdateBookCommand(book));
-            return Ok();
+            await _mediator.Send(new UpdateBookCommand(book));
+            return Ok(book);
         }
 
     }

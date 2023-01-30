@@ -2,5 +2,5 @@
 
 namespace CqrsBookshop.Commands
 {
-    public record DeleteBookCommand (Book Book) : IRequest<Book>;
+    public record DeleteBookCommand (int Id) : IRequest<Book>;
 }
