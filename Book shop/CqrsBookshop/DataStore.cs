@@ -1,4 +1,6 @@
-﻿namespace CqrsBookshop
+﻿using System.Security.Cryptography.Xml;
+
+namespace CqrsBookshop
 {
     public class DataStore
     {
@@ -19,15 +21,27 @@
             return await Task.FromResult(_books);
         }
 
-        public async Task AddBookAsync(Book product)
+        public async Task<Book> GetBookByIdAsync(int id)
         {
-            _books.Add(product);
+            return await Task.FromResult(_books.Single(x => x.Id == id));
+        }
+
+        public async Task AddBookAsync(Book book)
+        {
+            _books.Add(book);
             await Task.CompletedTask;
         }
 
-        public async Task<Book> GetBookByIdAsync(int Id)
+        public async Task DeleteBookAsync(Book book)
         {
-            return await Task.FromResult(_books.Single(x => x.Id == Id));
+            _books.Remove(book);
+            await Task.CompletedTask;
+        }
+
+        public async Task UpdateBookAsync(Book book)
+        {
+            _books.Where(x => x.Id == book.Id).ToList().ForEach(i => i.Name = book.Name);
+            await Task.CompletedTask;
         }
     }
 }
