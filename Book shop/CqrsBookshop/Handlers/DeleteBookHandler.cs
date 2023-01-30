@@ -14,8 +14,8 @@ namespace CqrsBookshop.Handlers
 
         public async Task<Book> Handle(DeleteBookCommand request, CancellationToken cancellationToken)
         {
-            await _dataStore.DeleteBookAsync(request.Book);
-            return request.Book;
+            await _dataStore.DeleteBookAsync(request.Id);
+            return null;
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography.Xml;
-
-namespace CqrsBookshop
+﻿namespace CqrsBookshop
 {
     public class DataStore
     {
@@ -32,9 +30,10 @@ namespace CqrsBookshop
             await Task.CompletedTask;
         }
 
-        public async Task DeleteBookAsync(Book book)
+        public async Task DeleteBookAsync(int id)
         {
-            _books.Remove(book);
+            var deletedBook = await GetBookByIdAsync(id);
+            _books.Remove(deletedBook);
             await Task.CompletedTask;
         }
 
