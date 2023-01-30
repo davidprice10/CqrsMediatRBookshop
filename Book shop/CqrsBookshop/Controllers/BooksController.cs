@@ -23,6 +23,13 @@ namespace CqrsBookshop.Controllers
             return Ok(books);
         }
 
+        [HttpGet("{id:int}", Name = "GetBookById")]
+        public async Task<IActionResult> GetBookByIdAsync(int id)
+        {
+            var book = await _mediator.Send(new GetBookByIdRequest(id));
+            return Ok(book);
+        }
+
         [HttpPost]
         public async Task<IActionResult> AddBookAsync([FromBody] Book book)
         {
@@ -30,11 +37,18 @@ namespace CqrsBookshop.Controllers
             return CreatedAtRoute("GetBookById", new { id = addedBook.Id }, addedBook);
         }
 
-        [HttpGet("{id:int}", Name = "GetBookById")]
-        public async Task<IActionResult> GetBookByIdAsync(int id)
+        [HttpDelete]
+        public async Task<IActionResult> DeleteBookAsync([FromBody] Book book)
         {
-            var book = await _mediator.Send(new GetBookByIdRequest(id));
-            return Ok(book);
+            var deletedBook = await _mediator.Send(new DeleteBookCommand(book));
+            return Ok();
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateBookAsync([FromBody] Book book)
+        {
+            var updatedBook = await _mediator.Send(new UpdateBookCommand(book));
+            return Ok();
         }
 
     }
