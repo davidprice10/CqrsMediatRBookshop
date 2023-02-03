@@ -42,5 +42,11 @@
             _books.Where(x => x.Id == book.Id).ToList().ForEach(i => i.Name = book.Name);
             await Task.CompletedTask;
         }
+
+        public async Task EventOccurred(Book book, string evt)
+        {
+            _books.Single(b => b.Id == book.Id).Name = $"{book.Name} evt: {evt}";
+            await Task.CompletedTask;
+        }
     }
 }

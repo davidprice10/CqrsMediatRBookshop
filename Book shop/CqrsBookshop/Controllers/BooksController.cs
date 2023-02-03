@@ -1,4 +1,5 @@
 ﻿using CqrsBookshop.Commands;
+using CqrsBookshop.Notifications;
 using CqrsBookshop.Requests;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
